@@ -11,6 +11,8 @@
     * That said: whole thing is written in scala, so best to use scala for most commands 
     * Any python code is intepreted to Java and then run, so added layer slows things down
     * Of note: Scala is statically typed
+- **GIST**
+  * You know how Groovy is basically python+java but more python than java because of dynamic typing? Scala is basically python+java but more java because of static typing
 
 ## More on Scala:
 - Most of this is from simplySyntaxExamples.scala
