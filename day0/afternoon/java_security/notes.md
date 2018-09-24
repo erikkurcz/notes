@@ -35,6 +35,7 @@
 * As you increase roles themselves, each user must be priv'd for every little thing
 * Becomes difficult and annoying to manage, **only if** you expand roles for new users
 * If instead you keep roles small and users large, system works
+* Called **ABAC** (unsure why)
 * Aka: use generic roles for things, not specific roles for things
 * For access to db:
   * One role to give access to application
@@ -50,3 +51,14 @@
   * role with access to application that can read, that can use xyz schema, that can use def table, that can use abc table
   * the above are all extremely specific roles, very difficult to manage
   * Put the complexity on user side of things and they get assigned roles, rather than roles being tailored to user's needs
+
+## Summary
+1. Never allow users more privs than their job requires
+2. Many layers of security
+3. Combine RBAC with ABAC
+
+## Contact
+* Twitter: @shawnmckinney
+* Blog: iamfortress.net
+* Project: https://directory.apache.org/fortress
+
