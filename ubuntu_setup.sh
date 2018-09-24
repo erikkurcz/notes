@@ -17,9 +17,13 @@ sudo apt install oracle-java8-set-default
 # untar
 # tar -xzf spark...
 
+sudo apt install unzip
+# cd spark-2.2.0...
+unzip *.zip
+rm *.zip
+
 # export SPARK_HOME=~/spark-2.2.0...
 
-# cd into it
 $SPARK_HOME/bin/spark-shell
 
 # there ya go
