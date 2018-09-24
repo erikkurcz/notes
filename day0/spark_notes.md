@@ -53,7 +53,19 @@
 ### Persistence
 * using memory option of Memory and Disk means if you run out of space in memory, it will dump to disk. 
   * performance hit? Yes. Saves your life for when you have a bigger job than expeected? Also yes.
-  
 
-
-
+### Spark SQL
+* Load your dataframe into memory, run SQL on it, but without making schemas etc
+* Can use different formats like JSON, Parquet, etc
+* Can perform ETL on data then run ad-hoc querying
+* 2 main componetns
+  * DataFrame (self-ex)
+  * SQLContext (all relevant SQL commands)
+* Quotes
+	* "Use this engine as much as possible, you'll get good performance out of it. A well-written SQL statemnet can do most of what you'll want to do most of the time, after that it's just misc cleanup using your own operations"
+	* "There is an engine for streaming data queries called StructuredSQL"
+	From the crowd: SparkSQL supports user-defined functions because it's just a lambda function applied through Spark's SQL engine. Hive will have trouble with it because it must be compiled into jar file, each query must be told where to find it, etc.
+* Using pure SQL **will not** enforce type safety, which is really the only drawback
+  * Shouldn't it be type safe based on schema of in-memory data? (*someone else asked this before I could*)
+    * Didn't have full answer on this but ack'd that it's a fair question. From the crowd: potentially it reads schema of datastructure and enforces that way?
+  * Related: If you're updating using SQL statement, will it error out if you designate wrong type for column?
