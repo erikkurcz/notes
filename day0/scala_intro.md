@@ -53,7 +53,20 @@ newv.apply(n => addOne(n))
 foreach(x => println("x: "+x))
 }
 ```
-  * Alternatively:
+    * Alternatively:
 ```
 (1 to 5000) filter(x => x > 400) take(5) foreach(x => println("x: "+x))
 ```
+
+- Iteration:
+```
+for (x <- map3){
+  println(x)
+}
+```
+
+- Recursion in Spark:
+  * Not ideal in spark as there is a lot of metadata associated with each structure
+  * Per Nilmeier: pushing calcs to stack when using recursion not such a bad thing, but must have lots of memory free for it. Recommending maps, loops instead.
+
+
