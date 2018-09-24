@@ -38,12 +38,13 @@
     * newv.apply(n => addOne(n))
 - Processing Collections
   * Can use dot-notation to chain commands
-`{(1 to 5000)
+```
+{(1 to 5000)
 .filter(x => x > 400)
 .take(5).
 foreach(x => println("x: "+x))
 }
-`
+```
   
 
 
