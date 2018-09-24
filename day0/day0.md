@@ -23,7 +23,7 @@
     * hello += " world" // this will work
   * Difference: thread safety
 - Map operation
-'''
+```
 var v = 1 to 5
 v.map(_ + 1) // adds 1 to all in the 1 to 5 variable BUT DOES NOT update original object. need to use assignment for that
 var newv = v.map(_ + 1)
