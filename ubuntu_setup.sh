@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: figure out how to pass in args
+  # will allow straightthrough run of this code rather than bit-by-bit
 # how to set up computer for spark stuff
 # need to just install all this instead of using usb iso
 
