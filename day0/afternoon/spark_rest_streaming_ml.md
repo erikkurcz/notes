@@ -36,6 +36,14 @@ URL [**here**][1]
   * While very convenient for some use cases, ultimately comes down to what you are optimizing for. If you need near-real time, then Spark Streaming (perhaps even reading from Kafka itself) will be for you. Just a little bit of latency is added into the system by the microbatching, but you get all of Spark in return. Honestly a pretty solid trade, especially if adding in some near-streaming graphs / visualizations. But would grafana + kafka streaming work in a similar capacity?
     * Probably, but maybe as an end-game rather than interim analysis on streaming data it wouldn't do as well as Spark in a Zeppelin notebook
   * Alternative is something called [**Kafka Streams**][3], which apparently is a true streaming analysis platform, more research to be done later
+* Demo of streaming graphs 
+  * inbound data comes in via stream in another notebook, is written to memory, then HTML chart is created off of the memory
+  * can also have it write data to filesystem before visualization, etc depending on the commands you give it
+* Streaming joins
+
+
+## How can this be applied?
+* think about this / document later outside of session
 
 [2]: https://github.com/azeltov/adb_workshop
 [3]: https://kafka.apache.org/documentation/streams/
