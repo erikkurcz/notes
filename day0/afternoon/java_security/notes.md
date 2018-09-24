@@ -35,7 +35,7 @@
 * As you increase roles themselves, each user must be priv'd for every little thing
 * Becomes difficult and annoying to manage, **only if** you expand roles for new users
 * If instead you keep roles small and users large, system works
-* Called **ABAC** (unsure why)
+* Called **ABAC** (Attribute Based Access Control)
 * Aka: use generic roles for things, not specific roles for things
 * For access to db:
   * One role to give access to application
