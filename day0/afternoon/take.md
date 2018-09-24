@@ -1,4 +1,4 @@
-### Spark Streaming / Static / Batch / ML
+### Spark Streaming / Databricks / Azure Part 1
 
 * Generally good session, but felt like more of a tutorial on how to log in / set stuff up so you have ability to do analysis. And a tour of features - nothing that was wildly technical
   * What packages you want, python type, versions of kafka and other softwares, etc. 
@@ -8,8 +8,11 @@
 * Hate to say it but might have been better off just messing around in Spark myself...
 * Admittedly some stuff was helpful to see demo'd, but wish it were more hands on. Again, partially due to technical issues during first half of session.
 
+### Spark Streaming
+* Unsure if really different from kafka. Seems like it's just high frequency batch rather than kafka-esque one-by-one streaming.
 
-### On Spark
+
+### On Spark in General
 * Certainly very useful, but must remember this being in memory have to be careful with it
 * Would love to see direct connection to SQL/postgres for this
 * Wildly faster for sql-esque data aggregations than direct from RDD source. Seems to make sense though since Spark is in-memory and I'm guessing indexes everything when it is read in

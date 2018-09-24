@@ -1,12 +1,12 @@
-## End to End SPark with Data at Rest/Streaming/ML
+## End to End SPark with Data at Rest/Streaming/ML *PART 1*
 URL [**here**][1]
 
 [1]: https://apachecon.dukecon.org/acna/2018/#/scheduledEvent/d72ef3c3b7198c158
 
-## Business Problem
+### Business Problem
 * How to build system for analyzing streaming click and orders data
 
-## Databricks on Azure
+### Databricks on Azure
 * Databricks itself is backend-agnostic, doesn't matter if it's Azure or AWS, etc
 * Basically you log in and use notebooks / Spark for analysis and storage, likewise vizualization
 * Can designate a path to get to csvs, but do not need to specify files themselves - it will recursively search / load using command specified at that point
@@ -24,9 +24,18 @@ URL [**here**][1]
   * Individual in crowd also suggested caching data once then making copies for each job
   * Either works, fair points all around
 
-## Flow
+### Flow
 * Schema can be inferred including types, unsure yet as to whether it can find nulls / raise flags on bad data (re: Vince)
 * Writing to parquet format is too easy. Literally a one liner.
 * Likewise loading stored file int oa table using SQL - just use the same file you just wrote to load the DataFrame in memory
 
+## Spark Streaming et al *PART 2*
+* Speaker referenced [*these files*][2] as the files he used in session for streaming. They **are** compatible outside Azure, can stand up your own spark instance anywhere and it should still work
+* Uses trigger interval - every few seconds (or less / more) to go retrieve new data from somewhere. So 'streaming' in this case just means 'microbatch', though does it ever mean anything else...?
+  * Per some online searching, seems that Kafka is one of very few truly streaming applications, while Spark Streaming is indeed microbatch
+  * While very convenient for some use cases, ultimately comes down to what you are optimizing for. If you need near-real time, then Spark Streaming (perhaps even reading from Kafka itself) will be for you. Just a little bit of latency is added into the system by the microbatching, but you get all of Spark in return. Honestly a pretty solid trade, especially if adding in some near-streaming graphs / visualizations. But would grafana + kafka streaming work in a similar capacity?
+    * Probably, but maybe as an end-game rather than interim analysis on streaming data it wouldn't do as well as Spark in a Zeppelin notebook
+  * Alternative is something called [**Kafka Streams**][3], which apparently is a true streaming analysis platform, more research to be done later
 
+[2]: https://github.com/azeltov/adb_workshop
+[3]: https://kafka.apache.org/documentation/streams/
