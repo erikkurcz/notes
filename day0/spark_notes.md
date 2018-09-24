@@ -69,3 +69,7 @@
   * Shouldn't it be type safe based on schema of in-memory data? (*someone else asked this before I could*)
     * Didn't have full answer on this but ack'd that it's a fair question. From the crowd: potentially it reads schema of datastructure and enforces that way?
   * Related: If you're updating using SQL statement, will it error out if you designate wrong type for column?
+
+# Streaming
+* Can be run fairly simply
+* Can be done better in Zeppelin than Jupyter
