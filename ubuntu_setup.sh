@@ -24,9 +24,10 @@ rm *.zip
 
 # export SPARK_HOME=~/spark-2.2.0...
 
-$SPARK_HOME/bin/spark-shell
-
-# there ya go
+# at this point ready to run the shell
+# use either of the following. spark-shell is scala.
+# $SPARK_HOME/bin/spark-shell
+# $SPARK_hOME/bin/pyspark
 
 # sublime
 # http://tipsonubuntu.com/2017/05/30/install-sublime-text-3-ubuntu-16-04-official-way/
@@ -37,6 +38,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
-# can be opened off command line with 'subl'
+# sublime can be opened off command line with 'subl'
 
 
