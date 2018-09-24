@@ -23,30 +23,37 @@
     * hello += " world" // this will work
   * Difference: thread safety
 - Map operation
-  * var v = 1 to 5
-  * v.map(_ + 1) // adds 1 to all in the 1 to 5 variable BUT DOES NOT update original object
-    * need to use assignment for that
-  * var newv = v.map(_ + 1)
+'''
+var v = 1 to 5
+v.map(_ + 1) // adds 1 to all in the 1 to 5 variable BUT DOES NOT update original object. need to use assignment for that
+var newv = v.map(_ + 1)
+```
 - Map object
-  * val map1 = Map((1,"a"),(2,"b"))
-  * val map2 = Map((3 -> "c"))
-  * var map3 = map1 ++ map 2
+```
+val map1 = Map((1,"a"),(2,"b"))
+val map2 = Map((3 -> "c"))
+var map3 = map1 ++ map 2
+```
 - Functions are first class citizens (same as python here)
-  * val addOne = (n: Int) => n + 1 // def lambda that takes int n returns n + 1
+
+`val addOne = (n: Int) => n + 1 // def lambda that takes int n returns n + 1`
+
   * applying this:
-    * newv.apply(addOne)
-    * newv.apply(n => addOne(n))
+```
+newv.apply(addOne)
+newv.apply(n => addOne(n))
+```
 - Processing Collections
   * Can use dot-notation to chain commands
 ```
-{(1 to 5000)
+{
+(1 to 5000)
 .filter(x => x > 400)
 .take(5).
 foreach(x => println("x: "+x))
 }
 ```
-  
-
-
-
-
+  * Alternatively:
+```
+(1 to 5000) filter(x => x > 400) take(5) foreach(x => println("x: "+x))
+```
