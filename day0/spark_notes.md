@@ -6,7 +6,7 @@
 * API
   * Scala, Java, Python
 * Cluter Managemente Framework
-  * standalone server or Mesos or YARN
+  * standalone server or Mesos or YARN (Kubernetes soon)
 
 ### Components of (slide 42)
 * Spark program is actually 2 programs: driver and executor

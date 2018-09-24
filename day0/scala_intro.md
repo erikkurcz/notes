@@ -53,7 +53,9 @@ newv.apply(n => addOne(n))
 foreach(x => println("x: "+x))
 }
 ```
+
     * Alternatively:
+
 ```
 (1 to 5000) filter(x => x > 400) take(5) foreach(x => println("x: "+x))
 ```
