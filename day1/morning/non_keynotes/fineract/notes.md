@@ -23,6 +23,7 @@ Ed Cable & Myrle Krantz / mifos.org / fineract.apache.org
   * Changing algos and structure of how lending decisions are made can be open
 
 ## Case Studies
+
 1. Nigeria - Mines.io
   * 200 million people, 70% of adults are underbanked
   * Mines is offering banking on mobile, non-smartphones
