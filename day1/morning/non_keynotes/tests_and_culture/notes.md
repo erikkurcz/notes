@@ -42,3 +42,9 @@ Slow execution |___________________________________
   * code quality should be open discussion with clear and distinct requirements, whatever they may be
   * testing can enable quality
   * attract contributors by quality of code
+
+* Q&A
+  * Templated PRs for required info can be a help - also a burden if overly specific
+  * Examples of proper tests on dummy code could help those new to contributing figure out what's required
+  * Structure code properly to make testing easy - maybe classes + decorators so tests are defined on compile rather than explicitly in the code. Decorators specifically make standardized tests across all subclasses or funcs easy.
+  * There are different means to do this for different organizations - figure out what works best for you
