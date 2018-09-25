@@ -69,9 +69,3 @@ TODO: look up other open source software foundations - Bertrand mentioned there 
 * Tie back to Open source
   * Similar culture of openness, transparency, sharing ideas
   * Apache Fineract: software to support joint liability groups and savings groups
-
----
-# Testing
-
-* Rafael Weingaertner
-* 
