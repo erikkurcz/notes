@@ -1,8 +1,8 @@
 ## Take
 
-* Overall pretty solid session! 
+* Pretty good session as primer to security in applications 
 * Equifax as an example was very relevant, good to think about
-* Specifically diagnosed what happened and explained how it could've been prevented
+	* Specifically diagnosed what happened and explained how it could've been prevented
 * Dived deep into how security *should* work rather than how most companies apply security (lip service in large part)
 * Explained key features of a good security system
 * Explained how fortress is used - even live demo'd his own system using fortress on tomcat to explain further

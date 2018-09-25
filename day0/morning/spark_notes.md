@@ -5,14 +5,14 @@
   * Anything that is Hadoop compatible
 * API
   * Scala, Java, Python
-* Cluter Managemente Framework
+* Cluster Management Framework
   * standalone server or Mesos or YARN (Kubernetes soon)
 
 ### Components of (slide 42)
 * Spark program is actually 2 programs: driver and executor
-  * Executor runs on cluter notes ('worker notes') or in local threads
+  * Executor runs on cluster notes ('worker notes') or in local threads
   * Around 4 is typically good (threads)
-  * Cluter manager spluts jobs into tasks, then distributes to workers
+  * Cluster manager splits jobs into tasks, then distributes to workers
     * Results return to driver program
 * Driver program --> where you literally type commands
 * Cluster manager --> distribution of tasks
@@ -27,7 +27,7 @@
 * Main entrypoint for everything
   * Tells Spark how / where to access a cluster
   * How to connect cluster managers
-  * Coordinates processes running on differnt notes
+  * Coordinates processes running on different notes
   * Used to create RDDs (Resilient Distributed Datasets)
 
 ### RDDs
@@ -40,11 +40,11 @@
     * Pushdown: only loads into memory data that matches query pattern
 
 ### RDD Operations
-* Transformations Create new RDD from existing each time (since RDDs are immutable). **No transforamtions are evaluated until an action is called**
-* Actions: Evaluate the lined-up transformations, gets results
+* Transformations Create new RDD from existing each time (since RDDs are immutable). **No transformations are evaluated until an action is called**
+* Actions: Evaluate the lined-up transformations, get results
 * Be aware: this means you might be like 'wow look how fast it loaded this terabyte of data!'
   * But in reality it hasn't executed the load until you need to do something with that data, such as adding 1 to each element in the Terabyte of data
-  * and *then* the operation takes forever because it's loading in and adding then returning
+  * and *then* the operation takes forever because it's loading in and adding then returning ('forever' being seconds)
 * All of this depends on the DAG of transformations
   * Whenever a node fails, DAG is replicated already so you're good to go
 * Transformations: map, filter, distinct, flatMap
@@ -52,24 +52,26 @@
 
 ### Persistence
 * using memory option of Memory and Disk means if you run out of space in memory, it will dump to disk. 
-  * performance hit? Yes. Saves your life for when you have a bigger job than expeected? Also yes.
+  * performance hit? Yes. Saves your life for when you have a bigger job than expected? Also yes.
 
 ### Spark SQL
-* Load your dataframe into memory, run SQL on it, but without making schemas etc
+* Load your dataframe into memory, run SQL on it, but without making schemas (they can be inferred, though a performance hit of course)
 * Can use different formats like JSON, Parquet, etc
 * Can perform ETL on data then run ad-hoc querying
-* 2 main componetns
+* 2 main components
   * DataFrame (self-ex)
   * SQLContext (all relevant SQL commands)
 * Quotes
-	* "Use this engine as much as possible, you'll get good performance out of it. A well-written SQL statemnet can do most of what you'll want to do most of the time, after that it's just misc cleanup using your own operations"
+	* "Use this engine as much as possible, you'll get good performance out of it. A well-written SQL statement can do most of what you'll want to do most of the time, after that it's just misc cleanup using your own operations"
 	* "There is an engine for streaming data queries called StructuredSQL"
-	From the crowd: SparkSQL supports user-defined functions because it's just a lambda function applied through Spark's SQL engine. Hive will have trouble with it because it must be compiled into jar file, each query must be told where to find it, etc.
+	* From the crowd: SparkSQL supports user-defined functions because it's just a lambda function applied through Spark's SQL engine. 
+	* Hive will have trouble with it because it must be compiled into jar file, each query must be told where to find it, etc.
 * Using pure SQL **will not** enforce type safety, which is really the only drawback
   * Shouldn't it be type safe based on schema of in-memory data? (*someone else asked this before I could*)
     * Didn't have full answer on this but ack'd that it's a fair question. From the crowd: potentially it reads schema of datastructure and enforces that way?
   * Related: If you're updating using SQL statement, will it error out if you designate wrong type for column?
 
-# Streaming
+### Streaming
 * Can be run fairly simply
 * Can be done better in Zeppelin than Jupyter
+* Uses microbatching rather that streaming in purest sense, but still, if you do need to take a 0.5s batch window down to basically nothing, use Kafka Streams instead. Lots of gain in Spark for a very small performance hit, most analysis that isn't latency-critical could realistically be done with Spark tied to Kafka
