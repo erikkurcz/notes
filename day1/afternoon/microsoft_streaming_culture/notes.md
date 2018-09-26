@@ -14,7 +14,7 @@ How Microsoft is learning to embrace the Apache Way with real time streaming, a 
   * Trading background (NY/Chi)
 
 ## Background
-* Originally lots of proprietary systems, but IBM began to dominate
+* Originally (80s) lots of proprietary systems, but IBM began to dominate
 * But over time open source came to be, and JMS rose
   * JMS = java messaging system, indended to be a standard API for messaging software
   * Reality of the situation is that there was a lot of scope creep
@@ -31,7 +31,7 @@ How Microsoft is learning to embrace the Apache Way with real time streaming, a 
 * 'Linux is a cancer...' -- Steve Balmer, 2001
 * Culture had lots of pressure to deliver (in a timely manner)
   * Some think collaboration is slower as a result
-* Lots of super smart people, but lack of trust and awareness
+* Lots of super smart people, but lack of trust and awareness in some cases - though this is changing
 
 ## Successes and Failures with Microsoft + ASF
 * Failures :(
@@ -46,7 +46,6 @@ How Microsoft is learning to embrace the Apache Way with real time streaming, a 
   	  * contribute to fixes
 * Mixed
   * Apache Avro
-    * Serialization
     * Messaging team started following and actively using avro
     * But someone else at msft made their own, prop avro library - which was not as robust
     * Ultimately hit snags in using prop library, should've gone open source initially

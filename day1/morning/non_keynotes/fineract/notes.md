@@ -32,7 +32,7 @@ Ed Cable & Myrle Krantz / mifos.org / fineract.apache.org
   * Launched in 2017, closed $13 series A 
   * *1 million customers* (already!), 1,000 new loans per day, aiming for 10,000 loans per day
   * Scaling to SE Asia, Latin America
-1. Mexico - Gentera
+2. Mexico - Gentera
   * 60% of Mexicans do not have a banking account
   * 90% of transactions are in cash
   * 6 million merchants do not accept electronic payment at all
@@ -40,12 +40,12 @@ Ed Cable & Myrle Krantz / mifos.org / fineract.apache.org
   * Shortened development cycles to 1 week
   * Notable: did not replace entire stack
     * Switched to Fineract for loan admin and reporting, kept SAP for savings administration
-1. Germany - Erste Financial Services
+3. Germany - Erste Financial Services
   * Bank restructuring post-recession
   * CEO of one of those banks needed to cut operational costs from $900M to $700M/year
   * Migrated mortgage loan portfolios to Fineract
   * Surprisingly, IT staff was the hardest sell in this case - most devs were used to waterfall approach
-1. India - Novopay
+4. India - Novopay
   * Biometrically identified 1.2 Billion people as auth for their bank
   * Market: 100M adults, 70% un/under-banked
   * Company: 2.1M unique customers, $124M in transaction volume in *just April 2018*, or annualized at $1.5B
@@ -61,7 +61,7 @@ Ed Cable & Myrle Krantz / mifos.org / fineract.apache.org
   * Force customer to do it alone - be a partner!
   * Confuse OSS with free - notorious misunderstanding
   * Let architecture get stagnant
-  * Say yes to everything. Focus on deals that can work, not those that are a big lift.
+  * Say yes to everything. Focus on deals that can work, not those that are a too big a lift.
 
 ## Q&A
 * How to handle fraud?

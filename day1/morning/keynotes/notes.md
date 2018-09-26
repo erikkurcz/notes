@@ -8,8 +8,6 @@
 
 TODO: check out the [**blog**][1]
 
-TODO: look up other open source software foundations - Bertrand mentioned there are "many"
-
 [1]: https://blogs.apache.org/foundation
 
 ### Finances
@@ -17,7 +15,6 @@ TODO: look up other open source software foundations - Bertrand mentioned there 
 * Strategic plan: https://www.apache.org/board/plan.html
 * "ASF project contributors added $624M worth of code" (how is this calculated?)
   * Apache Mynewt highest contribution value at $61M 
-  * Bertrand doesn't have formula for how these numbers were calculated
 
 ### Plan
 * TPKDTNFY - THe Plan is to Keep Doing This for the Next Fifty Years
@@ -31,7 +28,7 @@ TODO: look up other open source software foundations - Bertrand mentioned there 
 * Cliff Schmidt
   * Inspired to change something in the world in 2007
   * Felt education in developing countries was appropriate cause
-* Talking Book Program, later 'Amplio'
+* Talking Book Program / Literacy Bridge, later 'Amplio'
   * Means to transmit information to those in rural areas
   * Info on health, agriculture, etc available through it
   * Without it they might not know how to address issues like malaria, might not be using advanced farming techniques

@@ -9,7 +9,7 @@ Gauravu Saini / Offline-First Expense Manager app with Apache CouchDB
 * Inspired by CouchDB but for running in browsers
 * Stores data using WebSQL and IndexedDB 
 * When online, syncs to CouchDB on main server
-* When offline, simply stores
+* When offline, simply stores locally
 
 ## Apache Cordova
 * Hybrid mobile dev framework for cross-platform apps (android, iOS, windows, etc)

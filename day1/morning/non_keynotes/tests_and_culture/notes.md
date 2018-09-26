@@ -3,7 +3,7 @@
 * Rafael Weingaertner
 * Community, code, culture
   * Human tendency is to stay the same
-    * E.g. always using '@' for tagging
+    * e.g. always using '@' for tagging
     * e.g. simply adding the 10th condition to an If block instead of rethinking how a test is done
       * which causes issue of testing since there are 10! combinations to test!
     * Often the result of not understanding root of how some code works - need to know why
