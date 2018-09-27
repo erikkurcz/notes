@@ -1,0 +1,2 @@
+* following notes from spark sessions on day0, very cool that spark handles multiprocessing for you, but important to know underlying well
+* integration of mxnet and spark is very convenient, should explore rather than pure spark
